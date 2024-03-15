@@ -30,7 +30,7 @@ all:
 
 docker-manager-first:
   hosts:
-    qa: # @todo set this to be the hostname of your target server
+    niko-qa: # @todo set this to be the hostname of your target server
       ansible_host: 'opencrvs.salaliitto.fi' # @todo set this to be the IP address of your server
       data_label: data1 # for manager machines, this should always be "data1"
 
