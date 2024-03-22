@@ -145,6 +145,7 @@ jobs:
         continue-on-error: ${{ github.event.inputs.debug == 'true' }}
         run: |
           cd ./${{ github.event.repository.name }}
+          cat -A ~/.ssh/known_hosts
           yarn deploy \
           --clear_data=no \
           --environment=${{ github.event.inputs.environment }} \
