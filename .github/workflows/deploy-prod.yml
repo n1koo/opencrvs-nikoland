@@ -48,7 +48,7 @@ jobs:
       - name: Checkout country branch
         run: |
           cd ${{ github.event.repository.name }}
-          git checkout ${{ github.event.inputs.countryconfig-image-tag }}
+          git checkout ${{ github.ref_name }}
           cd ../
 
       - name: Checkout core branch
