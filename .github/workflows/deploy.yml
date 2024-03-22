@@ -61,6 +61,7 @@ jobs:
       - name: Read known hosts
         run: |
           cd ${{ github.event.repository.name }}
+          $ [ -f "infrastructure/known-hosts" ] || { echo "infrastructure/known-hosts missing" ; exit 1 ;}
           echo "KNOWN_HOSTS<<EOF" >> $GITHUB_ENV
           sed -i -e '$a\' ./infrastructure/known-hosts
           cat ./infrastructure/known-hosts >> $GITHUB_ENV
